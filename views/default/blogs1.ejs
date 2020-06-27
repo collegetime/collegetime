@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Collegetime-Blogs</title>
+	<link rel="icon" href="/default/images/favicon.png" type="image/png">
+
+<!-- for css in the html -->
+<%- include ('../partials/default/header-css')%>
+
+</head>
+
+<body class="" style="
+    background-color: #f8f8ff;" >
+
+<!-- Navigation -->
+
+<%- include ('../partials/default/top-navigation')%>
+
+
+  <!--================Hero Banner SM Area Start =================-->
+
+
+
+  <!-- <section style="padding:40px">
+   <div class="container">
+
+     <div class="" style="text-align:center;">
+
+          <h1 style ="color:#6059f6;">Blogs</h1>
+          <p>This is all we have</p>
+
+        </div>
+      </div>
+    </section> -->
+
+
+    <section  class="">
+        <div class="container">
+            <div class="row">
+              <%posts.forEach(function(post){%>
+              <div class="col-md-6 col-lg-4 mb-4 mb-lg-0" style="padding-bottom:20px" >
+                <div class="card-blog">
+                  <img class="card-img rounded-0" src="<%=post.file%>"  width="360px" height="280px" alt="<%=post.altimg%>">
+
+                  <div class="card-blog-body">
+                    <a class="card-title stretched-link " href="/blogs/<%=post.slug%>">
+                      <h4><%=post.title%></h4>
+                    </a>
+
+                    <ul class="card-blog-info">
+                      <li><a href=""><span class="align-middle"><i class="ti-notepad"></i></span><%=post.creationDate%></a></li>
+
+                    </ul>
+
+                    <p class="card-text"><%-post.description.substring(0,100)%></p>
+
+
+                    <ul class="foot">
+                      <li>4 min read</p></li>
+                    </ul>
+
+
+
+
+
+                        </div>
+
+                    </div>
+                      </div>
+                          <%})%>
+
+
+                  </div>
+
+
+    </section>
+
+
+
+    <section class="section-margin-large blogsmain">
+        <div class="container box">
+          <div class="section-intro sectionintro text-center pb-90px">
+      <img src="/default/images/web-06.png" height="100px">
+      <hr>
+      </div>
+            <div class="row">
+              <%posts.forEach(function(post){%>
+              <div class="blog col-md-4">
+                      <article class="card" style="width: 20rem;height:460px;">
+                        <div class="card-img-top">
+                          <img class="card-img rounded-0" src="<%=post.file%>" height="200px"  alt="<%=post.imgalt%>">
+                      </div>
+
+                        <div class="card-body cont">
+                            <a class="card-title cardtitle stretched-link" style="text-decoration : none" href="/blogs/<%=post.slug%>">
+                                <h3><%=post.title.substring(0,60)%></h3>
+                            </a>
+                            <p class="card-text cardtext"><%-post.description.substring(0,95)%></p>
+                          </div>
+                          <div class="daefooter">
+                            <ul id="daelist" class="foot">
+                              <li><p id="dae"><%=post.creationDate%></p></li>
+                              <li><p>3 MIN READ</p></li>
+                            </ul>
+                          </div>
+                      </article>
+                    </div>
+                          <%});%>
+                                              </div>
+                  </div>
+
+
+    </section>
+
+
+  <%- include ('../partials/default/footer')%>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<div class="container">
+
+
+    <h3 class="alert alert-dark p-3 text-dark text-center">Newsletter</h3>
+
+    <div class="row">
+        <div class="col-6 mx-auto">
+            <table class="table table-bordered text-center border-success text-white">
+                <thead class="bg-primary">
+                <tr>
+                    <th>Mail ID's</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody class="table-hover bg-dark category-list">
+                  <% mails.forEach(function(mail){%>
+                <!--{{#each categories}}-->
+                    <tr>
+
+                        <td><%=mail.mail%></td>
+                        <td class="d-flex justify-content-center">
+                            <a href="/admin/newsletter/edit/<%=mail._id%>" class="btn btn-sm btn-warning mr-2" role="button">Edit</a>
+                            <form action="/admin/newsletter/delete/<%=mail._id%>?newMethod=DELETE" method="post">
+                          <button class="btn btn-danger"type="submit" onclick="if (!confirm('Are you sure?')) { return false }">Delete</button>
+                          </form>
+
+                        </td>
+                    </tr>
+
+
+                    <%})%>
+              <!--  {{/each}} -->
+                </tbody>
+
+            </table>
+          </div>

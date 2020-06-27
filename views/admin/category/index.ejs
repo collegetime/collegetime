@@ -1,0 +1,104 @@
+<div class="container-fluid">
+
+
+    <h1 class="h3 mb-2 text-gray-800">All Category</h1>
+    <p class="mb-4">This section contain all Catagory with create, edit and delete. It is coded in ajax.</p>
+
+    <div class="row">
+    <div class="col-6 mx-auto">
+    <div class="card shadow mb-4">
+      <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Dont add too much category!</h6>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <thead>
+              <tr>
+
+                <th>Title</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+              <tbody  class=" category-list" >
+
+                  <% categories.forEach(function(category){%>
+                <!--{{#each categories}}-->
+                    <tr>
+
+                        <td><%=category.title%></td>
+                        <td class="d-flex justify-content-center">
+
+                          <a href="/admin/category/edit/<%=category._id%>" class="btn btn-success btn-icon-split" style="margin-right:4px;">
+                                              <span class="icon text-white-50">
+                                                <i class="fas fa-edit"></i>
+                                              </span>
+                                              <span class="text">Edit</span>
+                                            </a>
+                                                                        <!-- <button class="btn btn-sm btn-danger" type="submit" data-toggle="modal"
+                                data-target="#deleteModal" value="">Delete</button> -->
+                           <form action="/admin/category/delete/<%=category._id%>?newMethod=DELETE" method="post">
+                               <button class="btn btn-danger btn-icon-split" type="submit"
+                                   onclick="if (!confirm('Are you sure?')) { return false }" > <span class="icon text-white-50"><i class="fas fa-trash"></i>    </span>
+                                       <span class="text">Delete</span> </button>
+
+                           </form>
+
+
+
+                        </td>
+                    </tr>
+
+
+                    <%})%>
+              <!--  {{/each}} -->
+                </tbody>
+
+            </table>
+          </div>
+          </div>
+          </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- <hr> -->
+    <div class="col-6 mx-auto">
+
+
+    <div class="row p-4">
+        <div class="col-md-8">
+
+          <!-- <form class="" action="/admin/category" method="post"> -->
+          <!-- ajax is workings for this form -->
+
+            <div class="form-group">
+                <label for="title">Create New Category</label>
+                <input type="text" class="form-control" id="category-title" name="title" placeholder="Enter Category">
+            </div>
+
+            <a  id="create-category-button" class="btn btn-success btn-icon-split">
+                                <span class="icon text-white">
+                                  <i class="fas fa-check"></i>
+                                </span>
+                                <span class="text text-white">Create</span>
+                              </a>
+
+
+          <!-- </form> -->
+
+
+    </div>
+  </div>
+
+
+</div>
+</div>
+</div>

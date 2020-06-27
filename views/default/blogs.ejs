@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Collegetime-Blogs</title>
+	<link rel="icon" href="/default/images/favicon.png" type="image/png">
+  <meta property="og:site_name" content="CollegeTime" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CollegeTime-Blogs" />
+    <meta property="og:url" content="https://collegetime/blogs/" />
+    <meta property="article:publisher" content="https://www.instagram.com/collegetime.co/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CollegeTime-Blogs" />
+    <meta name="twitter:url" content="https://collegetime.co/" />
+<!-- for css in the html -->
+<%- include ('../partials/default/header-css')%>
+
+</head>
+
+<body class="" style="
+    background-color: #f8f8ff;" >
+
+<!-- Navigation -->
+
+<%- include ('../partials/default/top-navigation')%>
+
+
+  <!--================Hero Banner SM Area Start =================-->
+    <section class="section-margin-large">
+        <div class="container">
+            <% for (var i = 0 ; i < 1 ; i++) {%>
+              <div class="bcontent responsive" style="margin-top:50px;margin-bottom:50px;">
+        <div class="card" style="width: 1065px; height:500px;">
+            <div class="row no-gutters">
+              <div class="col-sm-5" style="padding-top:50px;padding-left:30px;">
+                  <div class="card-body">
+                      <h2 class="card-title" style="text-transform:capitalize;font-size:35px;margin-bottom:20px;"><%=posts[i].title.substring(0,60)%></h2>
+                      <p class="card-text" style="color:black;"><%-posts[i].description.substring(0,300)%></p>
+                      <div class="button1" style="margin-left:200px;">
+                        <a href="/blogs/<%=posts[i].slug%>">
+                        <p class="content-button1" style="text-align:right;width:140px;font-size:18px;text-decoration:none;">Read more</p>
+                      </a>
+                    </div>
+                      <div class="daefooter" style="margin-bottom:20px;">
+                        <ul id="daelist">
+                          <li><p id="dae" style="margin-left:-20px;"><%=posts[i].creationDate%></p></li>
+                        </ul>
+                      </div>
+                      <div class="daefooter2" style="margin-bottom:20px;">
+                        <ul id="daelist">
+                          <li><p id="daeaut" style="text-align:right;"><%=posts[i].author?.author%></p></li>
+                        </ul>
+                      </div>
+                  </div>
+              </div>
+                <div class="col-sm-7" style="padding:50px;">
+                    <img class="card-img" src="<%=posts[i].file%>" height=400px alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+            <%};%>
+            <div class="row blogs-2">
+              <% for (var i = 0;i< 1; i++) {%>
+                <div class="blog responsive2">
+                  <a style="text-decoration : none" href="/blogs/<%=posts[i].slug%>">
+                        <article class="cardt" style="height:505px;">
+                          <div class="card-img-top">
+                            <img class="card-img rounded-0" src="<%=posts[i].file%>" height=230px alt="">
+                        </div>
+
+                          <div class="card-body cont">
+                              <div class="card-title cardtitle" >
+                                  <h3><%=posts[i].title.substring(0,60)%></h3>
+                              </div>
+                              <div class"cardtext">
+                              <p id="card-text" style="font-size:17px;font-weight:normal"><%-posts[i].description.substring(0,100)%></p>
+                            </div>
+                          </div>
+                            <div class="daefooter">
+                              <ul id="daelist">
+                                <li><p id="dae"><%=posts[i].creationDate%></p></li>
+                              </ul>
+                            </div>
+                            <div class="daefooter2">
+                              <ul id="daelist">
+                                <li><p id="daeaut" style="text-align:right;"><%=posts[i].author?.author%></p></li>
+                              </ul>
+                            </div>
+
+                        </article>
+                      </a>
+                      </div>
+                          <%};%>
+              <% for (var i = 1;i< posts.length ; i++) {%>
+                <div class="blog ">
+                  <a style="text-decoration : none" href="/blogs/<%=posts[i].slug%>">
+                        <article class="cardt" style="height:505px;">
+                          <div class="card-img-top">
+                            <img class="card-img rounded-0" src="<%=posts[i].file%>" height=230px alt="">
+                        </div>
+
+                          <div class="card-body cont">
+                              <div class="card-title cardtitle">
+                                  <h3><%=posts[i].title.substring(0,60)%></h3>
+                              </div>
+                              <div class"cardtext">
+                              <p id="card-text" style="font-size:17px;font-weight:normal"><%-posts[i].description.substring(0,100)%></p>
+                            </div>
+                          </div>
+                            <div class="daefooter">
+                              <ul id="daelist">
+                                <li><p id="dae"><%=posts[i].creationDate%></p></li>
+                              </ul>
+                            </div>
+                            <div class="daefooter2">
+                              <ul id="daelist">
+                                <li><p id="daeaut" style="text-align:right;"><%=posts[i].author?.author%></p></li>
+                              </ul>
+                            </div>
+
+                        </article>
+                      </a>
+                      </div>
+                          <%};%>
+                  </div>
+                </div>
+
+
+    </section>
+    <script src="/default/vendors/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/default/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/default/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="/default/vendors/nice-select/jquery.nice-select.min.js"></script>
+    <script src="/default/js/jquery.ajaxchimp.min.js"></script>
+    <script src="/default/js/mail-script.js"></script>
+    <script src="/default/js/main.js"></script>
+
+  <%- include ('../partials/default/footer')%>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Collegetime-Error</title>
+	<link rel="icon" href="/default/images/favicon.png" type="image/png">
+
+<!-- for css in the html -->
+<%- include ('../partials/default/header-css')%>
+<style media="screen">
+/* this is for right background shape */
+.bg-shape::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 755px;
+  height: 700px;
+  background: url(/default/img/home/bg-shape-right.png) left center no-repeat;
+  background-size: cover;
+  z-index: -1; }
+
+  .magic-ball::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: #ebebff;
+    opacity: .5;
+    position: absolute;
+    bottom: -263px;
+    left: 70px;
+}
+
+@media (min-width: 768px)
+.magic-ball::after {
+    width: 0px;
+    height: 98px;
+    left: 165px;
+}
+
+</style>
+
+</head>
+
+<body class='bg-shape'>
+
+<!-- Navigation -->
+
+<%- include ('../partials/default/top-navigation')%>
+
+
+
+
+
+
+<!-- 404 Error Text -->
+<section class="hero-banner magic-ball" >
+  <div class="container">
+
+        <div class="text-center">
+          <div class="error mx-auto" data-text="404">404</div>
+          <p class="lead text-gray-800 mb-5">Page Not Found</p>
+          <p class="text-gray-500 mb-0">It looks like you found a glitch in the matrix...</p>
+          <a href="/">&larr; Back to Home</a>
+        </div>
+</div>
+
+      <!-- /.container-fluid -->
+  </section >
+
+<%# include ('../partials/default/footer')%>
+
+
+
+
+
+      </body>

@@ -1,0 +1,143 @@
+<script src='https://cdn.tiny.cloud/1/wnd2guicp3qjh1f7fgagtltpixf2s8fseydewus3p4gxqnqz/tinymce/5/tinymce.min.js' referrerpolicy="origin">
+ </script>
+
+ <div class="container">
+     <h1>Edit Post </h1>
+
+     <div class="row p-4">
+         <div class="col-md-10">
+             <form action="/admin/posts/edit/<%=post._id %>?newMethod=PUT" method="post">
+
+               <div class="form-group">
+                   <label for="title">Title</label>
+                   <input required type="text" class="form-control" name="title" id="title" placeholder="Enter The Title" value="<%=post.title%>">
+                 </div>
+                 <div class="form-group">
+                   <label for="author">Author</label>
+                   <select name="author" id="author" class="form-control">
+
+                     <%writers.forEach(function(post){%>
+
+                       <option value="<%=post._id%>"><%=post.author%></option>
+
+                       <%})%>
+
+
+                     </select>
+                   </div>
+                   <div class="form-group">
+                       <label for="category">Category</label>
+                       <select required name="category" id="category" class="form-control">
+                           <!-- {{#select post.category}} -->
+
+                       <%  categories.forEach(function(category){%>
+                                <!-- {{#each categories}} -->
+                                   <option value="<%=category._id%>"> <%=category.title%></option>
+                                   <%})%>
+                               <!-- {{/each}} -->
+
+                           <!-- {{/select}} -->
+
+                       </select>
+                   </div>
+
+                 <div class="form-group">
+                     <label for="file">File Upload</label>
+                     <input type="file" class="form-control" id="file" name="uploadedFile"  accept="image/jpeg, image/jpg, image/png, image/bmp">
+                 </div>
+
+
+
+
+
+                 <!-- <div class="form-group">
+                     <label for="status">Status</label>
+                     <select name="status" id="status" class="form-control">
+                         <option value="public">Public</option>
+                         <option value="private">Private</option>
+                         <option value="draft">Draft</option>
+                     </select>
+                 </div> -->
+
+
+
+
+
+
+
+
+                 <hr>
+                 <div class="form-group">
+                   <h4>SEO</h4>
+                               <div class="form-group">
+                                   <label for="title">Image Alt text</label>
+                                   <input required type="text" class="form-control" name="imgalt" id="title" placeholder="Alt text for image" value="<%=post.imgalt%>" >
+                               </div>
+
+                               <div class="form-group">
+                                   <label for="title">Url Slug (eg: collegetime.co/blogs/urlSLug)</label>
+                                   <input required type="text" class="form-control" name="slug" id="title" placeholder="Type Blog Url Slug" value="<%=post.slug%>" >
+                               </div>
+
+                               <!-- <div class="form-group">
+                                   <label for="summary">Summary of the blog</label>
+                                   <textarea  required name="summary" id="summary" class="form-control" placeholder="write short summary of blog" rows="3">post.summary</textarea>
+                               </div> -->
+
+                               <div class="form-group">
+                                   <label for="title">Write short summary</label>
+                                   <input required type="text" class="form-control" name="summary" id="title" placeholder="Write short sumamry" value="<%=post.summary%>" >
+                               </div>
+                   </div>
+                     <hr style="padding:5px;">
+                     <div>
+                       <h4>Quote Details</h4>
+                     <div class="form-group">
+                         <label for="quote">Quote</label>
+                         <input required type="text" class="form-control" name="quote" id="quote" placeholder="Type QUOTE" value="<%=post.quote%>">
+                     </div>
+                     <div class="form-group">
+                         <label for="quoteaut">Quote Author</label>
+                         <input required type="text" class="form-control" name="quoteaut" id="quoteaut" placeholder="Type QUOTE Author" value="<%=post.quoteaut%>">
+                     </div>
+                   </div>
+
+
+
+
+
+
+                 <!-- <div class="form-check ml-3">
+                     <label for="allowComments">
+                         <input required type="checkbox" class="form-check-input" id="allowComments" name="allowComments" >
+                         Allow Comments
+                     </label>
+                 </div> -->
+
+                 <h2>Full blog</h2>
+                 <div class="form-group">
+                     <label for="description">Content</label>
+                     <textarea  required name="description" id="description" class="form-control" placeholder="Enter your content here" rows="50"><%=post.description%></textarea>
+                 </div>
+
+
+                 <button class="btn btn-outline-warning btn-lg" type="submit">Update Post</button>
+
+
+             </form>
+         </div>
+     </div>
+   </div>
+
+  <script>
+     tinymce.init({
+       selector: 'textarea',
+       content_style: 'body { font-family: Georgia; font-size:20px; }',
+       plugins: 'a11ychecker advcode casechange formatpainter linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tinycomments tinymcespellchecker advlist autolink link image lists charmap print preview hr anchor pagebreak',
+       toolbar: 'undo redo| fontselect  fontsizeselect| bold italic underline |forecolor backcolor alignleft aligncenter alignright alignjustify preview| bullist numlist outdent indent | link image | print media fullpage | forecolor backcolor emoticons',
+       toolbar_mode: 'floating',
+       fontsize_formats: '8pt 10pt 12pt 14pt 16pt 18pt 24pt 36pt',
+       tinycomments_mode: 'embedded',
+       tinycomments_author: 'Author Name',
+     });
+   </script>

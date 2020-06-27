@@ -1,0 +1,82 @@
+<!-- Begin Page Content -->
+      <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">All Blogs</h1>
+        <p class="mb-4">This section contain all blog with edit and delete option in the last dropdown action coloumn . For creating new blog <a target="_blank" href="/admin/posts/create">Please Click Here</a>.</p>
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">It's too much down their</h6>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Author</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Date</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Author</th>
+                    <th>Actions</th>
+                  </tr>
+                </tfoot>
+                <tbody class="category-list">
+
+                  <% posts.forEach(function(post){ %>
+
+          <tr>
+
+              <td><%= post.creationDate %> </td>
+              <td><%= post.title %></td>
+              <td><%= post.category?.title %></td>
+              <td><%= post.author?.author %></td>
+
+              <td>
+                   <ul class="navbar-nav ml-auto">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right animated--fade-in" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" style="text-align:center;" href="/admin/posts/edit/<%=post._id%>" onclick="if (!confirm('Are you sure?')) { return false }" >Edit Blog</a>
+
+                          <div class="dropdown-divider"></div>
+                          <form action="/admin/posts/delete/<%=post._id%>?newMethod=DELETE" method="post">
+                              <button   style="border: none;
+                                                padding: 0px;
+                                                background-color: transparent;
+                                                color:#FF0000;
+                                                text-align: center;
+                                                "
+
+                                                onclick="if (!confirm('Are you sure?')) { return false }" class="btn btn-link dropdown-item"    type="submit" >Delete</button>
+
+                          </form>
+
+                        </div>
+                      </li>
+                    </ul>
+                  </td>
+
+            </tr>
+            <% }); %>
+
+                    </tbody>
+                  </table>
+
+
+                </div>
+                </div>
+                </div>
+                </div>

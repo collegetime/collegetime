@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta property="og:description" content="<%=blog.summary%>"/>
+  <title>Collegetime | <%=blog.title%></title>
+	<link rel="icon" href="/default/images/favicon.png" type="image/png">
+
+<!-- for css in the html -->
+<%- include ('../partials/default/header-css')%>
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+
+<%- include ('../partials/default/top-navigation')%>
+<!--================Hero Banner SM Area Start =================-->
+
+<div class="blogsdetails">
+  <section class="hero-banner">
+  <div class="container">
+
+    <div class="title">
+         <p id="date"><%=blog.creationDate%>/
+            <%=blog.category?.title%>
+
+         </p>
+         <p class="a"><%=blog.title%></p>
+    </div>
+
+  </div>
+</section>
+<!--================Hero Banner SM Area End =================-->
+
+
+
+<!--================Blog Area =================-->
+<section class="blog_area single-post-area section-margin">
+  <!--    <div class="blog-author">
+                  <div class="media align-items-center">
+                    <img src="img/blog/author.png" alt="">
+                    <div class="media-body">
+                      <a href="#">
+                        <h4>Harvard milan</h4>
+                      </a>
+                      <p>Second divided from form fish beast made. Every of seas all gathered use saying you're, he our dominion twon Second divided from</p>
+                      <a href="#"><i class="fab fa-linkedin"></i> Follow</a>
+                    </div>
+                  </div>
+                </div>  -->
+
+    <div class="container">
+        <div class="row">
+            <div class="posts-list">
+                <div class="single-post">
+                  <div class="blog_details v">
+                        <div class="row justify-content-center">
+                          <div class="feature-img col-md-8 col b">
+                              <img  class="img-fluid" src="<%=blog.file%>" width="700" alt="<%=blog.altimg%>">
+                          </div>
+                        </div>
+
+                    <div class="details content" style="margin-bottom:-70px;">
+                    <p style="margin-bottom: 35px;
+                    margin-top: 15px;"><em><%=blog.quote%></em></p>
+                    <p style="margin-bottom: 15px;
+                    margin-top:-20px;text-align:right;"><em>- <%=blog.quoteaut%></em></p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><!--kg-card-begin: html-->
+                      <div class="row">
+                          <div class="team" >
+                            <img src="/default/images/WEB newhh-13.png" height=70px style="margin-top:20px;">
+                            </div>
+                            <div class="show-aut row" >
+                              <p style="text-align:center;text-transform:capitalize;font-weight:bold; font-size:18px;"><%=blog.author?.author%></p>
+                              <div style="margin-top:-5px;">
+                        		<a href="<%=blog.author%>" target="_blank" style="margin-left:10px; margin-top:-10px;font-size:25px;"><span title="Share on linkedin"><i class="fab fa-linkedin" style="font-size:25px; color:#3b5998;" ></i></span></a>
+                        		<a href="https://instagram.com/<%=blog.author%>" target="_blank" style="margin-left:10px;margin-top:-10px; font-size:25px;"><span title=""><i class="fab fa-instagram" style="font-size:25px; color:#1da1f2;" ></i></span></a>
+                        		<br><br>
+                            </div>
+                          </div>
+                      </div>
+                    <div style="display: inline-block;
+                      font-weight: 700;
+                      color: green;
+                      padding: 3px 8px;
+                      border-radius: 6px;
+                      border: 1px solid green;
+                      margin-bottom: 15px;
+                      margin-top: 15px;"><%=blog.category?.title%></div>
+
+                      <p id="story">The Story</p>
+                             <%-blog.description%>
+                    </div>
+                    <hr><!--kg-card-end: hr--><p id="blogfoot">Share this Blog on <a href="https://api.whatsapp.com/send?text=An%20explainer%20on%20the%20lopsided%20economics%20of%20running%20an%20airline.%20https://bit.ly/2yzUFuB">WhatsApp</a>, <a href="https://twitter.com/intent/tweet?url=https://bit.ly/36vj55b&amp;via=finshots&amp;text=An%20explainer%20on%20the%20lopsided%20economics%20of%20running%20an%20airline.">Twitter</a>, or <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://finshots.in/archive/the-airlines-curse">LinkedIn</a>.</p>
+                </div>
+                <div class="container icons" align="center">
+          		<a href="http://www.facebook.com/sharer.php?u=https://finshots.in/archive/the-airlines-curse/%3Futm_source%3DwebShare%26utm_medium%3Dfacebook" target="_blank" style="margin: 10px; font-size:36px;"><span title="Share on facebook"><i class="fab fa-facebook-f" style="font-size:40px; color:#3b5998;" ></i></span></a>
+          		<a href="https://api.whatsapp.com/send?text=Finshots%20Special%3A%20The%20Airlines'%20Curse%20https://finshots.in/archive/the-airlines-curse/%3Futm_source%3DwebShare%26utm_medium%3Dwhatsapp" style="font-size:36px; margin:10px;" target="_blank"><span title="Send on whatsapp"><i class="fab fa-whatsapp" style="font-size:40px; color:#25d366"></i></span></a>
+          		<a href="https://twitter.com/share?url=https://finshots.in/archive/the-airlines-curse/%3Futm_source%3DwebShare%26utm_medium%3Dtwitter&amp;text=Finshots%20Special%3A%20The%20Airlines'%20Curse%20via%20%40finshots" target="_blank" style="margin: 10px; font-size:36px;"><span title="Share on twitter"><i class="fab fa-twitter" style="font-size:40px; color:#1da1f2;" ></i></span></a>
+          		<br><br>
+
+          	</div>
+            <section class="section-margin-large blogsmain">
+                <div class="container box">
+                  <div class="row">
+                    <% for (var i = 0; i < 3; i++) {%>
+                      <div class="blog col-md-4">
+                              <article class="cardt" style="height:505px;">
+                                <div class="card-img-top">
+                                  <img class="card-img rounded-0" src="<%=posts[i].file%>" height=230px alt="">
+                              </div>
+
+                                <div class="card-body cont">
+                                    <a class="card-title cardtitle" style="text-decoration : none" href="/blogs/<%=posts[i].slug%>">
+                                        <h3><%=posts[i].title.substring(0,60)%></h3>
+                                    </a>
+                                    <div class"cardtext">
+                                    <p class="card-text"><%-posts[i].description.substring(0,100)%></p>
+                                  </div>
+                                </div>
+                                  <div class="daefooter">
+                                    <ul id="daelist">
+                                      <li><p id="dae"><%=posts[i].creationDate%></p></li>
+                                    </ul>
+                                  </div>
+                                  <div class="daefooter2">
+                                    <ul id="daelist">
+                                      <li><p id="daeaut" style="text-align:right;"><%=posts[i].author?.author%></p></li>
+                                    </ul>
+                                  </div>
+
+                              </article>
+                            </div>
+                                <%};%>
+                                                    </div>
+                          </div>
+
+
+            </section>
+
+                  </div>
+                    </div>
+                      </div>
+                      </div>
+                      </section>
+
+                      <section class="section-margin">
+                        <div class="contain">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div  id="subscribe" class="search-wrapper">
+                                <h2 style="color:#32325d;">Subscribe To Our Newsletter</h2>
+                                <p class="responsive">Be a part of our ever growing community.<a href="https://instagram.com/collegetime.co"> Follow us on Instagram</a> </p>
+                                <form class="form">
+                                    <input class="email" id="email" type="email" name="email" class="form-control" placeholder="Enter Your Email address ">
+                                    <button class="newslettersubmit" id="create-newsletter-button" type="submit">Subscribe</button>
+                                </form>
+                                <p class="responsive2"><a href="https://instagram.com/collegetime.co"> Follow us on Instagram</a> </p>
+                                <p id="newssuccess"></p>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </section>-
+</div>
+<script src="/default/vendors/jquery/jquery-3.2.1.min.js"></script>
+<script src="/default/vendors/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="/default/vendors/owl-carousel/owl.carousel.min.js"></script>
+<script src="/default/vendors/nice-select/jquery.nice-select.min.js"></script>
+<script src="/default/js/jquery.ajaxchimp.min.js"></script>
+<script src="/default/js/mail-script.js"></script>
+<script src="/default/js/main.js"></script>
+<script>
+
+  $("#create-newsletter-button").on('click', function (e) {
+      e.preventDefault();
+      // console.log("this is check point 1 ");
+
+      var data = $("#email").val();
+      // alert(data); //just to debug
+
+    $.ajax({
+          url: '/admin/newsletter/create',
+         type: 'POST',
+          data: {mail: data},
+          success: function (response) {
+            document.getElementById("newssuccess").innerHTML="Successful Registration";
+              console.log(response);
+//category list is the class of tbody in admin/category/index
+
+          }
+      });
+        $("#email").val('');
+    });
+</script>
+<%- include ('../partials/default/footer')%>
+
+</body>
+</html>
