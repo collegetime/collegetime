@@ -1,0 +1,286 @@
+@media(min-width:700px){
+.content-centre{
+  top:20px;
+  text-align: left;
+}
+.content-centre h1{
+  font-size :40pt;
+}
+.content-centre p{
+  font-size:17px;
+}
+}
+@media(max-width:700px){
+.content-centre p{
+  margin-left:20px;
+  margin-right:20px;
+  text-align: left;
+}
+.content-centre h1{
+  margin-top:-100px;
+  font-size:35px;
+  text-align: center;
+}
+}
+.img-top{
+  top:-80px;
+}
+@media(max-width:700px){
+  .img-top{
+    margin-bottom:-100px;
+  }
+}
+.content-button1{
+
+  border:0px 5px 10px;
+  background-color: #6259F6;
+  padding:10px 25px 10px;
+  font-size:16pt;
+  color:white;
+  margin-left:10px;
+  margin-top:5px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+@media(max-width:700px){
+.button1{
+margin-left:13%;
+}
+}
+@media(max-width:380px){
+.button1{
+margin-left:5%;
+}
+}
+@media(max-width:330px){
+.button1{
+margin-left:2%;
+}
+}
+.buttons{
+  margin-top:20px;
+}
+@media(max-width:700px){
+  .buttons{
+    margin-top:20px;
+    margin-bottom:50px;
+  }
+}
+@media(max-width:700px){
+  .button2{
+    margin-left:-15px;
+  }
+}
+@media(max-width:330px){
+  .button2{
+    margin-left:-35px;
+  }
+}
+.content-button1:hover{
+  color:black;
+}
+.content-button2:hover{
+  color:black;
+}
+.content-button3:hover{
+  color:black;
+}
+.buttons a:hover{
+  text-decoration: none;
+}
+.content-button2{
+
+  border:0px 5px 10px;
+  background-color: #6259F6;
+  padding:10px 30px 10px;
+  font-size:16pt;
+  color:white;
+  margin-left:30px;
+  margin-top:5px;
+  border-radius:30px;
+  font-weight:bold;
+
+}
+.content-button3{
+
+  border:0px 5px 10px;
+  background-color: #6259F6;
+  padding:10px 30px 10px;
+  font-size:16pt;
+  color:white;
+  margin-left:30px;
+  margin-top:5px;
+  border-radius:30px;
+  font-weight:bold;
+}
+.button3{
+  margin-left:auto;
+  margin-right:10px;
+  margin-top:-20px;
+}
+@media(max-width:700px){
+.button3{
+margin-right:30%;
+margin-bottom:-100px;
+}
+}
+#subscribe{
+  margin-bottom:-70px;
+  margin-top:-20px;
+}
+@media(max-width:700px){
+  #subscribe h2{
+    font-size:23px;
+  }
+}
+.img-set{
+  top:-50px;
+}
+@media(max-width:700px){
+  .how-blogs{
+    margin-bottom:90px;
+  }
+}
+@media(max-width:700px){
+  .home-blogs{
+    margin-top:0px;
+    margin-bottom:-20px;
+  }
+}
+@media(min-width:700px){
+  .home-blogs{
+    margin-top:150px;
+    margin-bottom:-20px;
+  }
+}
+.team img{
+  border-radius:50%;
+}
+.team1 img{
+  border-radius:50%;
+}
+@media(min-width:700px){
+  .home{
+      background-image: url(../images/finn-14.png), url(../images/finn-15.png);
+      background-position:left top, right bottom;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 600px,700px;
+      background-position-y: 20px,260px;
+  }
+  .about{
+      background-image: url(../images/finn-14.png);
+      background-position:left top;
+      background-repeat: no-repeat;
+      background-size: 700px;
+      background-position-y: -5px;
+  }
+}
+#daeaut{
+  color:black;
+}
+#card-text{
+  color:black;
+}
+@media(max-width:800px)
+{
+.responsive{
+  display:none;
+}
+}
+@media(min-width:800px)
+{
+.responsive2{
+  display:none;
+}
+}
+@media(min-width:600px)
+{
+  .show-aut{
+    margin-top:40px;
+    padding-left:20px;
+  }
+}
+@media(max-width:600px)
+{
+  .show-aut{
+    margin-top:40px;
+    padding-left:20px;
+  }
+}
+@media(max-width:600px)
+{
+  .team{
+    margin-left:20px;
+  }
+}
+@media(min-width:600px)
+{
+  .team{
+    margin-left:0px;
+  }
+}
+.team1{
+  margin-left:0px;
+}
+@media(min-width:600px)
+{
+  .v{
+    margin-left:50px;
+  }
+  .b{
+    margin-left:-50px;
+  }
+}
+@media(max-width:600px)
+{
+  .v{
+    margin-top:30px;
+  }
+}
+@media(max-width:600px)
+{
+.email::placeholder{
+  text-align:center;
+}
+}
+@media(min-width:600px)
+{
+.hero-banner2{
+  margin-top:120px;
+}
+}
+@media(max-width:600px)
+{
+.hero-banner2{
+  margin-top:180px;
+}
+}
+@media(max-width:600px)
+{
+.about-img2{
+  margin-top:-100px;
+  margin-bottom:100px;
+}
+}
+@media(max-width:800px){
+  .blog{
+    padding-right:20px;
+  }
+}
+@media(min-width:1000px){
+  .blog{
+    padding-right:50px;
+  }
+}
+@media(max-width:600px){
+  .blog{
+    padding-right:0px;
+  }
+}
+@media(min-width:1000px){
+  .blogs-2{
+    padding-left:13px;
+  }
+}
