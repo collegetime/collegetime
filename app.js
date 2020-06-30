@@ -9,7 +9,7 @@ const hbs = require("express-handlebars");
 const {mongoDbUrl,PORT, hostname }= require('./config/configuration');
 // var expressLayouts = require('express-ejs-layouts');
 var bodyParser= require("body-parser");
-
+const ejsLint = require('ejs-lint');
 
 const flash = require("connect-flash");
 const session = require('express-session'); //with flash
